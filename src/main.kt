@@ -1,66 +1,62 @@
 fun main(){
     println("Bem vindo ao ByteBank")
 
-    val contaValber = Conta()
-    contaValber.titular = "Valber"
-    contaValber.numero = 1
-    contaValber.setSaldo(1000000.0)
+    val contaValber = Conta("Valber", 1)
+    contaValber.deposita(1000000.0)
 
-    val contaFran = Conta()
-    contaFran.titular = "Fran"
-    contaFran.numero = 2
-    contaFran.setSaldo(100.0)
+    val contaFran = Conta(titular = "Fran", numero = 2)
+    contaFran.deposita(100.0)
 
     println(contaValber.titular)
     println(contaValber.numero)
-    println(contaValber.getSaldo())
+    println(contaValber.saldo)
 
     println(contaFran.titular)
     println(contaFran.numero)
-    println(contaFran.getSaldo())
+    println(contaFran.saldo)
 
     println("Depositando na conta do Valber")
     contaValber.deposita(1000.0)
-    println(contaValber.getSaldo())
+    println(contaValber.saldo)
 
     println("Depositando na conta da Fran")
     contaFran.deposita(10.0)
-    println(contaFran.getSaldo())
+    println(contaFran.saldo)
 
     println("Sacando na conta do Valber")
     contaValber.saca(1000.0)
-    println(contaValber.getSaldo())
+    println(contaValber.saldo)
 
     println("Sacando na conta da Fran")
     contaFran.saca(10.0)
-    println(contaFran.getSaldo())
+    println(contaFran.saldo)
 
     println("Transferindo para a conta do Valber")
     if(contaFran.transfere(10.0, contaValber)) {
         println("Transferência realizada com sucesso")
-        println(contaValber.getSaldo())
-        println(contaFran.getSaldo())
+        println(contaValber.saldo)
+        println(contaFran.saldo)
     } else {
         println("Transferência não realizada")
     }
 
 }
 
-class Conta {
-    var titular = ""
-    var numero = 0
-    private var saldo = 0.0
-
-    fun getSaldo(): Double {
-        return this.saldo
-    }
-
-    fun setSaldo(valor: Double) {
-        this.saldo = valor
-    }
+class Conta(
+    var titular: String,
+    val numero: Int
+) {
+    var saldo = 0.0
+        private set(valor) {
+            if(valor > 0) {
+                field = valor
+            }
+        }
 
     fun deposita(valor: Double) {
-        this.saldo += valor
+        if(valor > 0) {
+            this.saldo += valor
+        }
     }
 
     fun saca(valor: Double) {
@@ -80,14 +76,12 @@ class Conta {
 }
 
 fun testaCopiasEReferencias() {
-    val contaFran = Conta()
-    contaFran.titular = "Fran"
-    contaFran.numero = 2
-    contaFran.setSaldo(100.0)
+    val contaFran = Conta("Fran", 2)
+    contaFran.deposita( 100.0)
 
     println(contaFran.titular)
     println(contaFran.numero)
-    println(contaFran.getSaldo())
+    println(contaFran.saldo)
 
     val contaTeste = contaFran
     contaTeste.titular = "Teste"
