@@ -1,9 +1,9 @@
 fun testaComportamentosConta() {
 
-    val contaValber = `Conta.kt`("Valber", 1)
+    val contaValber = Conta("Valber", 1)
     contaValber.deposita(1000000.0)
 
-    val contaFran = `Conta.kt`(titular = "Fran", numero = 2)
+    val contaFran = Conta(titular = "Fran", numero = 2)
     contaFran.deposita(100.0)
 
     println(contaValber.titular)

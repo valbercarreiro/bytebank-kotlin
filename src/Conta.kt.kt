@@ -1,4 +1,4 @@
-class `Conta.kt`(
+open class Conta (
     var titular: String,
     val numero: Int
 ) {
@@ -15,13 +15,13 @@ class `Conta.kt`(
         }
     }
 
-    fun saca(valor: Double) {
+    open fun saca(valor: Double) {
         if(this.saldo >= valor) {
             this.saldo -= valor
         }
     }
 
-    fun transfere(valor: Double, destino: `Conta.kt`): Boolean {
+    fun transfere(valor: Double, destino: Conta): Boolean {
         if(this.saldo >= valor) {
             this.saldo -= valor
             destino.deposita(valor)
