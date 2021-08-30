@@ -1,5 +1,5 @@
 fun testaCopiasEReferencias() {
-    val contaFran = Conta("Fran", 2)
+    val contaFran = ContaCorrente("Fran", 2)
     contaFran.deposita( 100.0)
 
     println(contaFran.titular)
