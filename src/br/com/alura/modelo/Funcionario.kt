@@ -1,3 +1,5 @@
+package br.com.alura.modelo
+
 abstract class Funcionario (
     val nome: String,
     val cpf: String,

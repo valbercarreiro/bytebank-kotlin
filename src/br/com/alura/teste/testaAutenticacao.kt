@@ -1,3 +1,9 @@
+package br.com.alura.teste
+
+import br.com.alura.modelo.Diretor
+import br.com.alura.modelo.Gerente
+import br.com.alura.modelo.SistemaInterno
+
 fun testaAutenticacao() {
     val gerente = Gerente(
         nome = "Alex",

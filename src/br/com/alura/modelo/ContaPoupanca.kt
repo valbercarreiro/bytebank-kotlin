@@ -1,3 +1,7 @@
+package br.com.alura.modelo
+
+import br.com.alura.modelo.Conta
+
 class ContaPoupanca(
     titular: String,
     numero: Int

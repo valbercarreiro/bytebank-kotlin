@@ -1,3 +1,7 @@
+package br.com.alura.modelo
+
+import br.com.alura.modelo.FuncionarioAdmin
+
 class Gerente(
     nome: String,
     cpf: String,

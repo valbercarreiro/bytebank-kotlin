@@ -1,3 +1,8 @@
+package br.com.alura.teste
+
+import br.com.alura.modelo.ContaCorrente
+import br.com.alura.modelo.ContaPoupanca
+
 fun testaContasDiferentes() {
     val contaCorrente = ContaCorrente("Alex", 1000)
 

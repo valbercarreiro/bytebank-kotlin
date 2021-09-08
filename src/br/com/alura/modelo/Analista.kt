@@ -1,3 +1,5 @@
+package br.com.alura.modelo
+
 class Analista(
     nome: String,
     cpf: String,

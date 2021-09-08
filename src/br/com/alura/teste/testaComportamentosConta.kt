@@ -1,3 +1,7 @@
+package br.com.alura.teste
+
+import br.com.alura.modelo.ContaCorrente
+
 fun testaComportamentosConta() {
 
     val contaValber = ContaCorrente("Valber", 1)

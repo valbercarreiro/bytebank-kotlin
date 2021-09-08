@@ -1,3 +1,5 @@
+package br.com.alura.teste
+
 fun testaFor() {
     for (i in 1..10) {
         val titular: String = "Alex $i"
@@ -7,7 +9,7 @@ fun testaFor() {
         saldo += 200
 
         println("Titular $titular")
-        println("Numero da Conta $numeroConta")
+        println("Numero da br.com.alura.modelo.Conta $numeroConta")
         println("Saldo da conta $saldo")
     }
 
