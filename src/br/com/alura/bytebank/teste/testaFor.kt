@@ -1,4 +1,4 @@
-package br.com.alura.teste
+package br.com.alura.bytebank.teste
 
 fun testaFor() {
     for (i in 1..10) {
@@ -9,7 +9,7 @@ fun testaFor() {
         saldo += 200
 
         println("Titular $titular")
-        println("Numero da br.com.alura.modelo.Conta $numeroConta")
+        println("Numero da br.com.alura.bytebank.Conta $numeroConta")
         println("Saldo da conta $saldo")
     }
 

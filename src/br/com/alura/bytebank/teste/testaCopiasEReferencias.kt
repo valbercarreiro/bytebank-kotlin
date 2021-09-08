@@ -1,6 +1,6 @@
-package br.com.alura.teste
+package br.com.alura.bytebank.teste
 
-import br.com.alura.modelo.ContaCorrente
+import br.com.alura.bytebank.modelo.ContaCorrente
 
 fun testaCopiasEReferencias() {
     val contaFran = ContaCorrente("Fran", 2)

@@ -1,6 +1,4 @@
-package br.com.alura.modelo
-
-import br.com.alura.modelo.FuncionarioAdmin
+package br.com.alura.bytebank.modelo
 
 class Gerente(
     nome: String,
