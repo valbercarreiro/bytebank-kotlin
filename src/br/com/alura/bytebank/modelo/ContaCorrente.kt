@@ -1,10 +1,10 @@
 package br.com.alura.bytebank.modelo
 
 class ContaCorrente(
-    titular: String,
+    cliente: Cliente,
     numero: Int
 ) : Conta(
-    titular,
+    cliente,
     numero
 ) {
 
