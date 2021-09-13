@@ -11,6 +11,15 @@ abstract class Conta (
             }
         }
 
+    companion object {
+        var total = 0
+            private set
+    }
+
+    init {
+        total++
+    }
+
     fun deposita(valor: Double) {
         if(valor > 0) {
             this.saldo += valor
