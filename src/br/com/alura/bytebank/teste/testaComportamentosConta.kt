@@ -2,13 +2,14 @@ package br.com.alura.bytebank.teste
 
 import br.com.alura.bytebank.modelo.Cliente
 import br.com.alura.bytebank.modelo.ContaCorrente
+import br.com.alura.bytebank.modelo.Endereco
 
 fun testaComportamentosConta() {
 
-    val contaValber = ContaCorrente(Cliente("Valber", "11111111111", 1), 1)
+    val contaValber = ContaCorrente(Cliente(nome = "Valber", cpf =  "11111111111", endereco =  Endereco(), senha = 1), numero = 1)
     contaValber.deposita(1000000.0)
 
-    val contaFran = ContaCorrente(cliente = Cliente("Fran", "11111111111", 1), numero = 2)
+    val contaFran = ContaCorrente(cliente = Cliente(nome = "Fran",  cpf = "11111111111", endereco =  Endereco(), senha = 2), numero = 2)
     contaFran.deposita(100.0)
 
     println(contaValber.cliente.nome)
